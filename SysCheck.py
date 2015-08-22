@@ -2,7 +2,7 @@
 
 #############################
 # Author: Chris Newman      #
-# Version: 1.1.3            #
+# Version: 1.1.4            #
 # Application: SysCheck.py  #
 # Language: Python          #
 #############################
@@ -38,9 +38,9 @@ RedColorStart = bcolors.RED;
 Space = GreenColorStart + 'Checking System Space:\n\n' + ColorEnd;
 SysInfo = GreenColorStart + 'Checking System Information:\n\n' + ColorEnd;
 SysMem = GreenColorStart + 'Checking System Memory:\n\n' + ColorEnd;
-SysUpdate = GreenColorStart + 'Checking System For Updates:\n\n' + ColorEnd;
+SysUpdate = GreenColorStart + 'Checking System Hardware:\n\n' + ColorEnd;
 UnderlineColorStart = bcolors.UNDERLINE;
-Version = ' Version: 1.1.3';
+Version = ' Version: 1.1.4';
 
 # Program synopsis
 
@@ -84,7 +84,7 @@ line10 = Break;
 
 for char in line0:
 	sleep(0.04)
-	os.system("python version.py");
+	print 'A simple system check program';
 	sys.stdout.write(char)
 	sys.stdout.flush()
 for char in line1:
@@ -111,7 +111,7 @@ for char in line5:
 	sys.stdout.flush()
 for char in line6:
 	sleep(0.09)
-	os.system("uname -a")
+	os.system("python version.py")
 	sys.stdout.write(char)
 	sys.stdout.flush()
 for char in line7:
@@ -129,7 +129,7 @@ for char in line9:
 	sys.stdout.flush()
 for char in line10:
 	sleep(0.09)
-  os.system("sudo apt-get update -y")
+	os.system("sudo lshw -short")
 	sys.stdout.write(char)
 	sys.stdout.flush()
 	
