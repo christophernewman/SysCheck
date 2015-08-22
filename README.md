@@ -1,4 +1,4 @@
-CheckCheck
+SysCheck
 ============
 
 SysCheck is a simple system check program developed in python.
