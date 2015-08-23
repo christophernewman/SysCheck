@@ -2,7 +2,7 @@
 
 #############################
 # Author: Chris Newman      #
-# Version: 1.1.4            #
+# Version: 1.1.5            #
 # Application: SysCheck.py  #
 # Language: Python          #
 #############################
@@ -34,13 +34,16 @@ HeaderColorStart = bcolors.HEADER;
 HeaderLine = '#############################';
 HeaderLine2 = '############################';
 Language = ' Language: Python';
+Complete = GreenColorStart + 'Complete!\n\n' + ColorEnd;
 RedColorStart = bcolors.RED;
 Space = GreenColorStart + 'Checking System Space:\n\n' + ColorEnd;
 SysInfo = GreenColorStart + 'Checking System Information:\n\n' + ColorEnd;
 SysMem = GreenColorStart + 'Checking System Memory:\n\n' + ColorEnd;
-SysUpdate = GreenColorStart + 'Checking System Hardware:\n\n' + ColorEnd;
+SysClean = GreenColorStart + 'Running System Cleanup:\n\n' + ColorEnd;
+SysUpdate = GreenColorStart + 'Checking and Installing System Updates:\n\n' + ColorEnd;
+SysHw = GreenColorStart + 'Checking System Hardware:\n\n' + ColorEnd;
 UnderlineColorStart = bcolors.UNDERLINE;
-Version = ' Version: 1.1.4';
+Version = ' Version: 1.1.5';
 
 # Program synopsis
 
@@ -77,8 +80,14 @@ line5 = SysInfo;
 line6 = Break;
 line7 = SysMem;
 line8 = Break;
-line9 = SysUpdate;
+line9 = SysHw;
 line10 = Break;
+line11 = SysUpdate;
+line12 = Break;
+line13 = SysClean;
+line14 = Break;
+line15 = Complete;
+line16 = Break;
 
 # Controls for each character line
 
@@ -93,7 +102,7 @@ for char in line1:
 	sys.stdout.flush()
 for char in line2:
 	sleep(0.09)
-	os.system("date")
+	os.system("tput setaf 3; date")
 	sys.stdout.write(char)
 	sys.stdout.flush()
 for char in line3:
@@ -102,7 +111,7 @@ for char in line3:
 	sys.stdout.flush()
 for char in line4:
 	sleep(0.09)
-	os.system("df -h")
+	os.system("tput setaf 3; df -h")
 	sys.stdout.write(char)
 	sys.stdout.flush()
 for char in line5:
@@ -111,7 +120,7 @@ for char in line5:
 	sys.stdout.flush()
 for char in line6:
 	sleep(0.09)
-	os.system("python version.py")
+	os.system("tput setaf 3; python version.py")
 	sys.stdout.write(char)
 	sys.stdout.flush()
 for char in line7:
@@ -120,7 +129,7 @@ for char in line7:
 	sys.stdout.flush()
 for char in line8:
 	sleep(0.09)
-	os.system("free -m")
+	os.system("tput setaf 3; free -m")
 	sys.stdout.write(char)
 	sys.stdout.flush()
 for char in line9:
@@ -129,9 +138,37 @@ for char in line9:
 	sys.stdout.flush()
 for char in line10:
 	sleep(0.09)
-	os.system("sudo lshw -short")
+	os.system("tput setaf 3; sudo lshw -short")
 	sys.stdout.write(char)
 	sys.stdout.flush()
+for char in line11:
+	sleep(0.04)
+	sys.stdout.write(char)
+	sys.stdout.flush()
+for char in line12:
+	sleep(0.09)
+	os.system("tput setaf 3; sudo apt-get update -y")
+	sys.stdout.write(char)
+	sys.stdout.flush()
+for char in line13:
+	sleep(0.04)
+	sys.stdout.write(char)
+	sys.stdout.flush()
+for char in line14:
+	sleep(0.09)
+	os.system("tput setaf 3; sudo apt-get autoremove && sudo apt-get clean && sudo apt-get autoclean")
+	sys.stdout.write(char)
+	sys.stdout.flush()
+for char in line15:
+	sleep(0.04)
+	sys.stdout.write(char)
+	sys.stdout.flush()
+for char in line16:
+	sleep(0.09)
+	os.system("tput sgr0; tput bel;")
+	sys.stdout.write(char)
+	sys.stdout.flush()
+
 	
 #######
 # END #
