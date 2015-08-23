@@ -1,0 +1,11 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
+
+2015-08-23  Chris Newman  <chris@xnetproject.net>
+4
+## [1.1.5] - 2015-08-23 SysCheck.py (SysCheck)
+### Added
+- Software updates function
+- Cleanup functions and completion dialog.
+- Color for command outputs
