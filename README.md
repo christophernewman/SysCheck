@@ -1,22 +1,24 @@
 
 SysCheck - The Base System Check Utility.
-=========================================
+
 
 Homepage: http://www.xnetproject.net/
-
 Version : 1.1.5
-
 Language: Python
-
 Author  : Chris Newman <chris@xnetproject.net>
 
 Files
 -----
 
 SysCheck.py
+
 version.py
+
 README (This File)
+
 CHANGELOG
+
+check.log (Created when the program has been executed)
 
 Contents
 --------
@@ -30,6 +32,7 @@ Contents
 	Configuration
 	Running
 	Customization
+	Logging
         Documentation   
 	Mailing Lists
 	Reporting Bugs
@@ -79,13 +82,13 @@ Installing under Linux
 
   From the archive simply unpack in any location.
 
-  The software can be executed by running the following command within the
-directory the application files:
+  It is required that this program be executed by running the following command within the
+directory the application files reside:
 
 sudo python SysCheck.py
 
   After executing the application; a series of commands will print in 
-terminal specifying the status of each command.
+terminal specifying the status of each command, and then log each action.
 
 
 Configuration
@@ -113,6 +116,12 @@ Customization
   The SysUpdate and SysClean functions for control line12, and control
 line14 can be customized to work in other flavors that use different package
 management systems and functions.
+
+Logging
+-------
+
+  All function outputs are logged into a single output file called check.log
+This can be easily updated to a different name of your choice.
 
 
 Documentation
