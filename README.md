@@ -4,7 +4,7 @@ SysCheck - The Base System Check Utility.
 
 Homepage: http://www.xnetproject.net/
 
-Version : 1.1.5
+Version : 1.1.6
 
 Language: Python
 
