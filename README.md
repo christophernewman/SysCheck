@@ -3,25 +3,19 @@ SysCheck - The Base System Check Utility.
 
 
 Homepage: http://www.xnetproject.net/
-
 Version : 1.1.6
-
 Language: Python
-
 Author  : Chris Newman <chris@xnetproject.net>
 
 Files
 -----
 
 SysCheck.py
-
 version.py
-
 README (This File)
-
 CHANGELOG
-
 check.log (Created when the program has been executed)
+LICENSE
 
 Contents
 --------
@@ -70,8 +64,8 @@ Supported Platforms
 
   SysCheck has been tested upon the following platforms:
 
-	Ubuntu  	Debian		Ubuntu Mate		
-
+	Ubuntu  	Debian		Ubuntu Mate		Fedora
+	Redhat		CentOS
 
  
    --
