@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+2015-09-02  Chris Newman  <chris@xnetproject.net>
+
+## [1.1.7] - 2015-08-31 SysCheck.py (SysCheck)
+### Added
+- Operating System name checks to carry out specific functions
+- Changed naming conventions for commands from line to case
+- Additional synosis information
+
 2015-08-25  Chris Newman  <chris@xnetproject.net>
 
 ## [1.1.6] - 2015-08-25 SysCheck.py (SysCheck)
